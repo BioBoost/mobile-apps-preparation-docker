@@ -8,7 +8,8 @@ app.use(express.json());
 
 app.get('/', (req, res) => {
   res.send({
-    message: 'Hello and Welcome to docker demo API'
+    message: 'Hello and Welcome to docker demo API',
+    env_message: config.general.env_message
   })
 })
 

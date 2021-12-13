@@ -3,6 +3,7 @@ version: "3.7"
 
 services:
   backend:
+    # Normally this should be image for example build with Github actions !
     build: ./backend
     ports:
       - "3000:3000"
@@ -12,6 +13,7 @@ services:
       ENV_MESSAGE: ${BACKEND_MESSAGE}
 
   frontend:
+    # Normally this should be image for example build with Github actions !
     build: ./frontend
     ports:
       # Run dev server on host port 8080
