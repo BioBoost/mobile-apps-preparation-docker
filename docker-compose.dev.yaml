@@ -13,6 +13,9 @@ services:
       # Run dev server on host port 4000
       - "4000:3000"
     restart: "no"
+    environment:
+      NODE_ENV: development
+      ENV_MESSAGE: "Just development"
 
   frontend:
     build:

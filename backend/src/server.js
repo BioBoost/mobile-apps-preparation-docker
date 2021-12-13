@@ -15,3 +15,5 @@ app.get('/', (req, res) => {
 app.listen(config.general.port, () => {
   console.log(`API Listening at http://localhost:${config.general.port} in ${config.general.environment} mode`)
 })
+
+console.log(`A message from environment: ${config.general.env_message}`);
