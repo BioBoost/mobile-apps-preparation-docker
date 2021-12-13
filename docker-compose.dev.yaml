@@ -1,0 +1,28 @@
+# This is the development file
+version: "3.7"
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+    volumes:
+      # Mount src dir into container
+      - ./backend/src:/app/src
+    ports:
+      # Run dev server on host port 4000
+      - "4000:3000"
+    restart: "no"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      target: development-stage
+    volumes:
+      # Mount src dir into container
+      - ./frontend/src:/app/src
+    ports:
+      # Run dev server on host port 8080
+      - "8080:8080"
+    restart: "no"
