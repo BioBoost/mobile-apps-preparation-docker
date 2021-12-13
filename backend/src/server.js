@@ -13,6 +13,12 @@ app.get('/', (req, res) => {
   })
 })
 
+app.get('/message', (req, res) => {
+  res.send({
+    message: 'This is a cool API endpoint'
+  })
+})
+
 app.listen(config.general.port, () => {
   console.log(`API Listening at http://localhost:${config.general.port} in ${config.general.environment} mode`)
 })
