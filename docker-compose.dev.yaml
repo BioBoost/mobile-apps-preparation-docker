@@ -29,3 +29,5 @@ services:
       # Run dev server on host port 8080
       - "8080:8080"
     restart: "no"
+    environment:
+      CHOKIDAR_USEPOLLING: "true"
