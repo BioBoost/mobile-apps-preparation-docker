@@ -20,7 +20,8 @@ CMD ["npm", "run", "serve"]
 
 # Build Stage
 FROM base as build-stage
-RUN npm install --production
+# RUN npm install --production    # Also need cli for building
+RUN npm install
 COPY . .
 RUN npm run build
 

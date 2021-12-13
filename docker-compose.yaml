@@ -9,7 +9,7 @@ services:
       - "3000:3000"
     restart: "unless-stopped"
     environment:
-      NODE_ENV: development
+      NODE_ENV: production
       ENV_MESSAGE: ${BACKEND_MESSAGE}
 
   frontend:
