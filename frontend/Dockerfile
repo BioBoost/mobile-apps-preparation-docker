@@ -1,3 +1,8 @@
+# It's probable best for using full distro image for development. Seems like some tools are missing
+# from alpine images we do need in development.
+# This would also mean it's best to split up the Dockerfile,
+# into Dockerfile and Dockerfile.dev
+
 # Base
 FROM node:16.13.0-alpine3.14 as base
 WORKDIR /app
